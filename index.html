@@ -15,11 +15,11 @@
 />
   <link rel = "stylesheet" href = "style.css"/>
 </head>
-<style>
+<!-- <style>
   body {
     padding-top: 80px; /* Adjust for fixed-top navbar */
   }
-</style>
+</style> -->
 <body>
   <!-- Navbar with category filter buttons -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
@@ -119,9 +119,9 @@
   </div>
    
   <!--Book a table   -->
-  <div id = "bookTable">
-    <h1 class = "text-danger text-center m-5 py-5"><u>Book A Table</u></h1>
-    <div class="container card bg-white p-5 align-items-center border-danger">
+  <div id = "bookTable" >
+    <h1 class = "text-danger text-center m-5 pt-5"><u>Book A Table</u></h1>
+    <div class="container card bg-white p-5 mb-5 align-items-center border-danger">
       <form >
         <div class="mb-3">
           <label for="name" class="form-label">Name</label>
@@ -144,37 +144,40 @@
     </div>
   </div>
  <!-- text-moials -->
-  <section class="bg-light  my-5-5" id = "testmonials">
-    <h3 class = "text-danger text-center m-4 p-3">Testmonials By Popular Chef's</h3>
-       <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-  <div class="carousel-indicators">
+  <section class="bg-light  mt-5 pt-5" id = "testmonials">
+    <h3 class = "text-danger text-center  p-5">Testmonials By Popular Chef's</h3>
+       <div id="carouselExampleDark" class="carousel carousel-dark slide " data-bs-ride="carousel">
+  <!-- <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-  </div>
-  <div class="carousel-inner">
-    <div class="carousel-item active " data-bs-interval="10000">
-      <img src="https://i.pinimg.com/736x/71/27/a7/7127a7f0b67e52d00cab6b89848552bb.jpg" class="img-fluid mx-auto d-block rounded pb-5" style="max-width: 200px;" alt="...">
-      <div class="carousel-caption d-none d-md-block text-danger">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="https://i.pinimg.com/1200x/87/cb/ca/87cbca3b19212fa120d706d8c0be593f.jpg" class="img-fluid mx-auto d-block rounded" style="max-width: 200px;" alt="...">
-      <div class="carousel-caption d-none d-md-block text-danger">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img src="https://i.pinimg.com/736x/aa/37/7a/aa377a41ce5e5e409c38c40ac611eb66.jpg" class="img-fluid mx-auto d-block rounded" style="max-width: 200px;" alt="...">
-      <div class="carousel-caption d-none d-md-block text-danger">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
+  </div> -->
+ <div class="carousel-inner">
+  <div class="carousel-item active" data-bs-interval="10000">
+    <div class="text-center">
+      <img src="https://i.pinimg.com/1200x/87/cb/ca/87cbca3b19212fa120d706d8c0be593f.jpg" class="img-fluid mx-auto d-block rounded pb-3" style="max-width: 200px;" alt="Chef Arjun Patel">
+      <h5 class="text-danger mt-2">Chef Arjun Patel</h5>
+      <p class="text-secondary px-3">“Every dish at Delicious Bites is a masterpiece. The flavors are balanced perfectly — you can tell they cook with love.”</p>
     </div>
   </div>
+
+  <div class="carousel-item" data-bs-interval="2000">
+    <div class="text-center">
+      <img src="https://i.pinimg.com/736x/71/27/a7/7127a7f0b67e52d00cab6b89848552bb.jpg" class="img-fluid mx-auto d-block rounded pb-3" style="max-width: 200px;" alt="Chef Emilia Rossi">
+      <h5 class="text-danger mt-2">Chef Emilia Rossi</h5>
+      <p class="text-secondary px-3">“This place reminds me of home-cooked meals in Tuscany. The ambiance, the freshness, the warmth — simply unmatched.”</p>
+    </div>
+  </div>
+
+  <div class="carousel-item">
+    <div class="text-center">
+      <img src="https://i.pinimg.com/736x/aa/37/7a/aa377a41ce5e5e409c38c40ac611eb66.jpg" class="img-fluid mx-auto d-block rounded pb-3" style="max-width: 200px;" alt="Chef David Nguyen">
+      <h5 class="text-danger mt-2">Chef David Nguyen</h5>
+      <p class="text-secondary px-3">“From the starters to the desserts, every bite is pure joy. Delicious Bites is redefining comfort food with elegance.”</p>
+    </div>
+  </div>
+</div>
+
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
@@ -278,21 +281,19 @@
 </section>
 
 <!-- footer -->
-
-  <footer class= "bg-dark text-light py-5">
-
-
-
-    <div class="container text-white text-center py-4">
-      <p class="mb-0">© 2025 Delicious Bites. All rights reserved.</p>
-      <div class="mt-2 d-flex flex-column flex-sm-row justify-content-center align-items-center">
-        <a href="#" class="text-danger me-3"><i class="fab fa-facebook-f"></i></a>
-        <a href="#" class="text-danger me-3"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="text-danger me-3"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="text-danger"><i class="fab fa-linkedin-in"></i></a>
-      </div>
+<footer class="bg-dark text-light py-5 w-100">
+  <div class=" container  text-white text-center">
+    <p class="mb-3">© 2025 Delicious Bites. All rights reserved.</p>
+    <div class="d-flex justify-content-center align-items-center gap-3">
+      <a href="#" class="text-danger"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-danger"><i class="fab fa-twitter"></i></a>
+      <a href="#" class="text-danger"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-danger"><i class="fab fa-linkedin-in"></i></a>
     </div>
-  </footer>
+  </div>
+
+  
+</footer>
 
 
   <script
