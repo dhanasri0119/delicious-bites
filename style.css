@@ -1,0 +1,17 @@
+.nav-container{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    
+}
+.text-contaier{
+   
+    text-decoration:none;
+
+}
+.bg-container{
+    background-image: url('images/mian-page.jpg');
+    background-size: cover;
+    height:100vh;
+    min-height:100vh;
+}

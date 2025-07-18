@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurant Menu App</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  
+/>
+  <link rel = "stylesheet" href = "style.css"/>
+</head>
+<style>
+  body {
+    padding-top: 80px; /* Adjust for fixed-top navbar */
+  }
+</style>
+<body>
+  <!-- Navbar with category filter buttons -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Delicious Bites</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavMenu"
+        aria-controls="navbarNavMenu"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item me-4 pt-2">
+           <h5><a class = "text-light" style = "text-decoration: none;" href = "#home">Home</a></h5>
+          </li>
+          <li class="nav-item me-4 pt-2">
+             <h5><a class = "text-light" style = "text-decoration: none;" href = "#about">About</a></h5>
+          </li>
+          <li class="nav-item me-4 pt-2">
+           
+            <h5><a class = "text-light" style = "text-decoration: none;" href = "#menu">Menu</a></h5>
+          </li>
+          <li class="nav-item me-4 pt-2">
+           <h5><a class = "text-light" style = "text-decoration: none;" href = "#testmonials">Review</a></h5>
+          </li>
+          <li class="nav-item me-4 pt-2">
+            <h5><a class = "text-light" style = "text-decoration: none;" href = "#contact">Contact</a></h5>
+          </li>
+          <li class="nav-item me-4 ">
+           <button class = "btn bg-light text-danger p-2 rounded-pill" onclick = "location.href = '#bookTable' ">Book Table</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <!-- Hero section with background image -->
+  <section id ="home">
+  
+    
+     <div class = "bg-container d-flex flex-column justify-content-center align-items-center" >
+        <h1 class = "text-danger">Delicious Bites</h1>
+        <p class = "text-danger p-5 text-center">At Delicious Bites, we serve more than just food—we serve experiences. Whether you're craving a hearty meal, a refreshing drink, or a sweet treat, our menu is crafted to delight every taste. Come hungry, leave happy!</p>
+        <button class = "btn btn-danger"><a class = "text-white text-contaier" href = "#menu">Order Now</a></button> 
+    </div> 
+ 
+  </section>
+   <!-- About section -->
+    <section class="pt-5 bg-white " id = "about">
+    <div class="container text-center">
+      <h2 class="text-danger m-4">About Delicious Bites</h2>
+      <div class = "d-flex flex-row justify-content-center p-5 ps-0">
+        <div>
+          <img class = "h-50 me-5" src = "https://i.pinimg.com/736x/93/ea/d7/93ead7f8ee31d722ccdc4fbc847a1ac4.jpg"/>
+          <div>
+            <h3 class = "text-dark p-3">Book A Table</h3>
+            <p class ="text-dnager">85564542</p>
+            <p class = "text-danger">deliciousbites.com</p>
+          </div>
+        </div>
+        <div>
+          <p class="card lead text-dark border-danger p-2">We’re passionate about bringing people together with great food and warm hospitality. Our chefs use fresh, locally-sourced ingredients to craft meals you’ll remember.</p>
+          <p class="card lead text-dark border-danger p-2"> Since our founding, we've been committed to serving fresh, flavorful dishes that bring people together. Whether you're grabbing a quick lunch, enjoying a romantic dinner, or sharing dessert with friends, our team is here to make every meal memorable.
+             From hearty starters to indulgent desserts and refreshing drinks, our diverse menu is crafted with love, using only the finest ingredients. Every bite tells a story—and we’re honored to share ours with you.
+          </p>
+          <p class="fw-bold  text-danger">Come hungry. Leave happy. 🍽️</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- Container for menu items -->
+
+
+  <div class="container " id = "menu">
+    <h1 class = "text-danger text-center m-5  p-5"><u>Menu Card</u></h1>
+    <div class="row mb-4">
+      <div class="col text-center mb-5">
+        <button class="btn btn-danger category-btn" data-category="all">All</button>
+        <button class="btn btn-danger category-btn" data-category="starters">Starters</button>
+        <button class="btn btn-danger category-btn" data-category="mains">Mains</button>
+        <button class="btn btn-danger category-btn" data-category="desserts">Desserts</button>
+        <button class="btn btn-danger category-btn" data-category="drinks">Drinks</button>
+      </div>
+    <div class="row" id="menuItems">
+     
+      <!-- Menu cards get injected here -->
+    </div>
+  </div>
+   
+  <!--Book a table   -->
+  <div id = "bookTable">
+    <h1 class = "text-danger text-center m-5 py-5"><u>Book A Table</u></h1>
+    <div class="container card bg-white p-5 align-items-center border-danger">
+      <form >
+        <div class="mb-3">
+          <label for="name" class="form-label">Name</label>
+          <input  type="text" class="form-control" placeholder="Enter Your Name" id="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" placeholder="Enter Your Email" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="date" class="form-label">Date</label>
+          <input type="date" class="form-control"  id="date" required>
+        </div>
+        <div class="mb-3">
+          <label for="time" class="form-label">Time</label>
+          <input type="time" class="form-control"  id="time" required>
+        </div>
+        <button type="submit" class="btn btn-danger">Book Now</button>
+      </form>
+    </div>
+  </div>
+ <!-- text-moials -->
+  <section class="bg-light  my-5-5" id = "testmonials">
+    <h3 class = "text-danger text-center m-4 p-3">Testmonials By Popular Chef's</h3>
+       <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active " data-bs-interval="10000">
+      <img src="https://i.pinimg.com/736x/71/27/a7/7127a7f0b67e52d00cab6b89848552bb.jpg" class="img-fluid mx-auto d-block rounded pb-5" style="max-width: 200px;" alt="...">
+      <div class="carousel-caption d-none d-md-block text-danger">
+        <h5>First slide label</h5>
+        <p>Some representative placeholder content for the first slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="https://i.pinimg.com/1200x/87/cb/ca/87cbca3b19212fa120d706d8c0be593f.jpg" class="img-fluid mx-auto d-block rounded" style="max-width: 200px;" alt="...">
+      <div class="carousel-caption d-none d-md-block text-danger">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="https://i.pinimg.com/736x/aa/37/7a/aa377a41ce5e5e409c38c40ac611eb66.jpg" class="img-fluid mx-auto d-block rounded" style="max-width: 200px;" alt="...">
+      <div class="carousel-caption d-none d-md-block text-danger">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</section>
+<!-- contact -->
+ <section id = "contact">
+  <h1 class = "text-danger text-center m-5 p-5"><u>Contact Us</u></h1>
+  <div class="container card bg-white p-4 d-flex flex-column align-items-center ">
+    <div class="container">
+    <div class="row g-4">
+      <!-- Address -->
+      <div class=" col-12 col-sm-6">
+        <div class="d-flex align-items-start bg-white p-4 shadow-sm rounded">
+          <div class="me-3">
+            <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+              <i class="fa-solid fa-location-dot fa-lg"></i>
+            </div>
+          </div>
+          <div>
+            <h5 class="fw-bold">Address</h5>
+            <p class="mb-0">A108 Adam Street, New York, NY 535022</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call Us -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-start bg-white p-4 shadow-sm rounded">
+          <div class="me-3">
+            <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+              <i class="fa-solid fa-phone fa-lg"></i>
+            </div>
+          </div>
+          <div>
+            <h5 class="fw-bold">Call Us</h5>
+            <p class="mb-0">+1 5589 55488 55</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Email Us -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-start bg-white p-4 shadow-sm rounded">
+          <div class="me-3">
+            <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+              <i class="fa-solid fa-envelope fa-lg"></i>
+            </div>
+          </div>
+          <div>
+            <h5 class="fw-bold">Email Us</h5>
+            <p class="mb-0">info@example.com</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Opening Hours -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-start bg-white p-4 shadow-sm rounded">
+          <div class="me-3">
+            <div class="bg-danger text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+              <i class="fa-solid fa-clock fa-lg"></i>
+            </div>
+          </div>
+          <div>
+            <h5 class="fw-bold">Opening Hours</h5>
+            <p class="mb-0">
+              <strong>Mon-Sat:</strong> 11AM - 11PM; <strong>Sunday:</strong> Closed
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container card my-5 p-5">
+  <form>
+   
+    <div class="row g-3">
+  <div class="col">
+    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+  </div>
+  <div class="col">
+    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+  </div>
+</div>
+    <div class="my-3">
+      
+      <textarea class="form-control " id="message" rows="4" placeholder="Your Message"></textarea>
+    </div>
+    <div class = "text-center ">
+    <button type="submit" class="btn btn-danger rounded-pill">Send Message</button>
+    </div>
+  </form>
+</div>
+</section>
+
+<!-- footer -->
+
+  <footer class= "bg-dark text-light py-5">
+
+
+
+    <div class="container text-white text-center py-4">
+      <p class="mb-0">© 2025 Delicious Bites. All rights reserved.</p>
+      <div class="mt-2 d-flex flex-column flex-sm-row justify-content-center align-items-center">
+        <a href="#" class="text-danger me-3"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-danger me-3"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-danger me-3"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-danger"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+  >
+  </script>
+  <script>
+    // Sample menu data array
+    const menuData = [
+      {
+        id: 1,
+        name: "Bruschetta",
+        description: "Grilled bread with tomato, garlic and basil",
+        price: "₹199",
+        category: "starters",
+        image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        id: 2,
+        name: "Caesar Salad",
+        description: "Crisp romaine with Caesar dressing and croutons",
+        price: "₹149",
+        category: "starters",
+        image: "https://i.pinimg.com/1200x/04/44/31/044431c8343b5801ff75f4b493fd6a24.jpg"
+      },
+      {
+        id: 3,
+        name: "Grilled Salmon",
+        description: "Salmon fillet with lemon butter sauce",
+        price: "₹199",
+        category: "mains",
+        image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        id: 4,
+        name: "Margherita Pizza",
+        description: "Classic pizza with fresh tomatoes, mozzarella and basil",
+        price: "₹299",
+        category: "mains",
+        image: "https://i.pinimg.com/736x/a2/74/1c/a2741cd8d94391ea7fdafbb266599c1a.jpg"
+      },
+      {
+        id: 5,
+        name: "Tiramisu",
+        description: "Coffee-flavored Italian dessert",
+        price: "₹599",
+        category: "desserts",
+        image: "https://i.pinimg.com/736x/83/13/76/8313763df60fbc6a74eb90944947524e.jpg"
+      },
+      {
+        id: 6,
+        name: "Cheesecake",
+        description: "Creamy cheesecake with a graham cracker crust",
+        price: "₹399",
+        category: "desserts",
+        image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        id: 7,
+        name: "Lemonade",
+        description: "Freshly squeezed lemonade",
+        price: "₹199",
+        category: "drinks",
+        image: "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=400&q=80"
+      },
+      {
+        id: 8,
+        name: "Espresso",
+        description: "Strong, rich espresso coffee",
+        price: "₹299",
+        category: "drinks",
+        image: "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=400&q=80"
+      }
+    ];
+
+    const menuContainer = document.getElementById("menuItems");
+    const categoryButtons = document.querySelectorAll(".category-btn");
+
+    // Function to render menu cards
+    function displayMenu(items) {
+      menuContainer.innerHTML = "";
+      if (items.length === 0) {
+        menuContainer.innerHTML = '<p class="text-center fs-4">No items found in this category.</p>';
+        return;
+      }
+      items.forEach(item => {
+        const card = document.createElement("div");
+            card.className = "col-lg-3 col-md-4 col-sm-6 mb-4"; // responsive columns
+            card.innerHTML = `
+            <div class="card" style=" height: 450px;">
+            <img src="${item.image}" class="card-img-top" style="height: 240px; object-fit: cover;" alt="...">
+            <div class="card-body d-flex flex-column justify-content-end">
+                <h5 class="card-title">${item.name}</h5>
+                <p class="card-text">${item.description}</p>
+                <a href="#" class="btn btn-danger">${item.price}</a>
+            </div>
+            </div>
+
+
+
+            
+            `;
+        menuContainer.appendChild(card);
+      });
+    }
+
+    // Initial display - show all menu items
+    displayMenu(menuData);
+
+    // Filter items by category on button click
+    categoryButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Remove 'active' class from all buttons
+        categoryButtons.forEach(btn => btn.classList.remove("active"));
+        // Add 'active' class to clicked button
+        button.classList.add("active");
+
+        const category = button.getAttribute("data-category");
+
+        if (category === "all") {
+          displayMenu(menuData);
+        } else {
+          const filteredItems = menuData.filter(item => item.category === category);
+          displayMenu(filteredItems);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
